@@ -1,5 +1,5 @@
 {% set name = "wagtail-headless-preview" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail_headless_preview-{{ version }}.tar.gz
-  sha256: 730e86ea2de91602b64cc2412b5ff3e0b3f3679e3767eb417c109c9110209c07
+  sha256: 581d8419cd1ef1f7de88235445e9695e5591d46259283d56bfe814e8620fa1d5
 
 build:
   noarch: python

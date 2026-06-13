@@ -1,5 +1,5 @@
 {% set name = "wagtail-headless-preview" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_headless_preview-{{ version }}.tar.gz
-  sha256: 581d8419cd1ef1f7de88235445e9695e5591d46259283d56bfe814e8620fa1d5
+  sha256: dbabbb614bd1689f048738c46034c557a3ee426e0ef80feb4831bcfc93a24e15
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,8 +20,9 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - django
     - python >={{ python_min }}
-    - wagtail >=4.1
+    - wagtail >=7.0
 
 test:
   imports:
